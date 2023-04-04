@@ -1,3 +1,5 @@
+
+var PORT= process.env.PORT ||5000;
 const express = require("express");
 const path = require("path");
 
@@ -9,7 +11,7 @@ app.get("/", (req, res) => {
 
 // serving the index.html file 
 
-const server = app.listen(5000);
+const server = app.listen(PORT);
 const portNumber = server.address().port;
 console.log(`port: ${portNumber}`);
 // can see the port number in terminal - you can dictate the port number
